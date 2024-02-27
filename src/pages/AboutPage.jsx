@@ -1,12 +1,14 @@
+import { useParams } from "react-router-dom"
+
 const AboutPage = () => {
+  const { name } = useParams();
     return (
-      <>
-      <h1 className="p-4 mt-10 text-center font-semibold text-4xl text-white">About</h1>  
-      <ul className="text-center mt-5 text-yellow-500 text-xl space-y-2">
-         <li className="text-5xl font-semibold">50% offer</li>
-         <li className="text-5xl font-semibold">Chicken Biriyani</li>
-      </ul>
-      </>
+     <div className="m-10">
+      <h4 className="text-xl font-semibold mb-3 text-white">About</h4>
+      <div className="bg-white rounded p-10">
+        <h5>Welcome {name||"Guest"}, this is about page</h5>
+      </div>
+     </div>
     )
   }
   

@@ -24,6 +24,11 @@ const router = createBrowserRouter([
         errorElement:<ErrorPage/>
       },
       {
+        path:'/about/:name',  //To get value from url
+        element:<AboutPage/>,
+        errorElement:<ErrorPage/>
+      },
+      {
         path:'/contact',
         element:<ContactPage/>,
         errorElement:<ErrorPage/>
