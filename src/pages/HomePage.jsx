@@ -1,12 +1,14 @@
 const HomePage = () => {
     return (
       <>
-      <h1 className="p-4 mt-10 text-center font-semibold text-4xl text-white">FavFoods</h1>  
-      <ul className="text-center mt-5 text-yellow-500 text-xl">
-         <li>Biriyani</li>
-         <li>Sambar</li>
-         <li>Curd Rice</li>
-      </ul>
+     <h4 className="text-white">Blogs</h4>
+     <div className="bg-white p-10 rounded flex items-center">
+      <img src="./src/assets/images/React_Logo_SVG.svg.png" className="w-20" alt="logo" />
+      <div>
+        <h4>Anbu is preparing ReactJS Course Material</h4>
+        <p>He is delaying for last few decades!</p>
+      </div>
+     </div>
       </>
     )
   }
