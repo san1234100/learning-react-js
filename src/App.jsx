@@ -1,10 +1,12 @@
 import TheNavbar from "./components/TheNavbar"
-import HomePage from "./pages/HomePage"
+import { Outlet } from "react-router-dom"
 function App() {
   return (
     <>
-    <TheNavbar/>
-    <HomePage/>
+   <TheNavbar/>
+   <div>
+    <Outlet/>
+   </div>
     </>
   )
 }
