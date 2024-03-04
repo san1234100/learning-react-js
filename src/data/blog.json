@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Anbu is preparing ReactJS Course Material",
+    "desc": "He is delaying for last few decades!",
+    "img": "./src/assets/images/React_Logo_SVG.svg.png"
+  },
+  {
+    "id": 2,
+    "title": "Anbu is preparing Hackathon event on 26 Feb 2024",
+    "desc": "He is organizing this event with 4 industry experts",
+    "img": "./src/assets/images/React_Logo_SVG.svg.png"
+  },
+  {
+    "id": 3,
+    "title": "Anbu is recruiting people for Internship",
+    "desc": "He made this internship for education purpose",
+    "img": "./src/assets/images/React_Logo_SVG.svg.png"
+  }
+]

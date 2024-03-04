@@ -1,40 +1,35 @@
+import { useState } from "react";
+import blogData from "../data/blog.json";
 const HomePage = () => {
-  const blogPosts = [
-    {
-      id : 1,
-      title : "Anbu is preparing ReactJS Course Material",
-      desc : "He is delaying for last few decades!",
-      img : "./src/assets/images/React_Logo_SVG.svg.png"
-    },
-    {
-      id : 2,
-      title : "Anbu is preparing Hackathon event on 26 Feb 2024",
-      desc : "He is organizing this event with 4 industry experts",
-      img : "./src/assets/images/React_Logo_SVG.svg.png"
-    },
-    {
-      id : 3,
-      title : "Anbu is recruiting people for Internship",
-      desc : "He made this internship for education purpose",
-      img : "./src/assets/images/React_Logo_SVG.svg.png"
-    }
-  ]
-
-  const blogPostTemplate = blogPosts.map( post => {
-    return <div className="bg-white p-10 rounded flex mb-3 items-center space-x-3" key={post.id}>
-    <img src={post.img} className="w-20" alt="logo" />
-    <div className="space-y-1">
-      <h4 className="font-semibold text-xl">{post.title}</h4>
-      <p>{post.desc}</p>
-    </div>
-   </div>
-  })
-    return (
-      <div className="m-10">
-     <h4 className="text-white text-2xl py-5 font-semibold">Latest posts</h4>
-      { blogPostTemplate }
-      </div>
-    )
+  //  const [tip,setTip] = useState(1)
+  //     return (
+  //       <div className="m-10 bg-white p-5 rounded flex justify-between">
+  //         <h1 className='font-semibold text-xl'>Add a tip!</h1>
+  //           <div>
+  //             <span className='text-xl pe-10 font-semibold'>{tip}</span>
+  //             <button className='px-4 py-2 bg-blue-400 hover:bg-blue-500 font-semibold text-white rounded' onClick={()=>setTip(tip+1)}>Add tip!</button>
+  //           </div>
+  //       </div>
+  //     )
+  const [name,setName] = useState("")
+  const handleName = (name) =>{
+    return name.length >= 4 ? setName(name) : '';
   }
-   
-  export default HomePage
+  return (
+    <div className="m-10 bg-white p-5 rounded flex justify-between">
+      <h1 className="font-semibold text-xl">Welcome, {name || 'Guest'}</h1>
+      <div>
+        <input 
+        type="text" 
+        id="name"
+        className="px-4 py-2 bg-gray-100 text-gray-800 outline-none border border-gray-400 rounded"
+         placeholder="Enter your name" 
+         autoFocus
+         onChange={(e)=>handleName(e.target.value)}
+         />
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
