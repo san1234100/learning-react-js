@@ -1,5 +1,5 @@
 import blogData from '../data/blog.json'
-'https://dummyjson.com/posts'
+// 'https://dummyjson.com/posts'
 const HomePage = () => {
   const blogPosts = blogData;
 
