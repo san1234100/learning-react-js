@@ -8,6 +8,9 @@ const AboutPage = () => {
       <div className="bg-white rounded p-10">
         <h5>Welcome {name||"Guest"}, this is about page</h5>
       </div>
+      <div className="bg-white m-10 p-5 rounded">
+        <h1 className="font-semibold text-2xl">FAQ</h1>
+      </div>
      </div>
     )
   }
