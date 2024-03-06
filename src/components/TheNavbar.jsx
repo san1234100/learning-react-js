@@ -14,6 +14,9 @@ const TheNavbar = () => {
           <li className="hover:text-yellow-500 cursor-pointer">
             <Link to={"/contact"}>Contact</Link>
           </li>
+          <li className="hover:text-yellow-500 cursor-pointer">
+            <Link to={"/followers"}>Followers</Link>
+          </li>
         </ul>
       </div>
     </>
