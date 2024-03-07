@@ -1,6 +1,6 @@
 import { useState } from "react";
 import propTypes from "prop-types"
-const Accordion = ({title = 'Unknown',desc = ''}) => {
+const Accordion = ({title = 'Unknown',desc = '',...props}) => {
     const [accordionActive,setAccordionActive] = useState(false)
     const toggleAccordion = () =>{
         setAccordionActive(!accordionActive)
@@ -27,6 +27,7 @@ const Accordion = ({title = 'Unknown',desc = ''}) => {
       </div>
       <div className={`p-5 bg-green-50 ${accordionActive ? "" : "hidden"}`}>
         <p>{desc}</p>
+        <p>{props.children ? props.children : ''}</p>
       </div>
     </div>
   );

@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.primary{
+    @apply p-5 bg-blue-950 text-blue-400 text-lg rounded-lg border-[3px] border-blue-500;
+}
+.secondary{
+    @apply p-5 bg-zinc-900 text-gray-400 text-lg rounded-lg border-[3px] border-gray-500;
+}
+.success{
+    @apply p-5 bg-emerald-950 text-emerald-300 text-lg rounded-lg border-[3px] border-emerald-700;
+}
+.danger{
+    @apply p-5 bg-red-950 text-red-300 text-lg rounded-lg border-[3px] border-red-500;
+}
+.warning{
+    @apply p-5 bg-yellow-950 text-yellow-300 text-lg rounded-lg border-[3px] border-yellow-500;
+}
+.info{
+    @apply p-5 bg-blue-300 text-blue-100 text-lg rounded-lg border-[3px] border-blue-500;
+}
