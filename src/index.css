@@ -28,7 +28,7 @@
 }
 
 .btn{
-    @apply px-4 py-2 font-semibold rounded-md;
+    @apply px-4 py-2 font-semibold rounded-md cursor-pointer;
 }
 .btn-primary{
     @apply bg-[#0d6efd] text-white hover:bg-[#1061dc]
@@ -53,4 +53,17 @@
 }
 .btn-dark{
     @apply bg-[#212529] text-white hover:bg-[#424649]
+}
+
+.card{
+ @apply bg-white w-96 h-fit rounded-lg;
+}
+.card-header{
+    @apply w-full;
+}
+.card-body{
+    @apply p-4 gap-y-5;
+}
+.card-title{
+    @apply font-semibold;
 }

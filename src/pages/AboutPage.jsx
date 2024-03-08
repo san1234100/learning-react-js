@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Accordion from "../components/Accordion";
 import Alert from "../components/Alert";
 import Button from "../components/Button";
+import Card from "../components/Card";
 
 const AboutPage = () => {
   const { name } = useParams();
@@ -28,9 +29,25 @@ const AboutPage = () => {
             <p>Welcome to Cyberdude channel</p>
           </Accordion>
           {/* <Alert text={"Troubleshoot"} color={"success"}/> */}
-          <Button className="btn btn-success" type="submit">Submit</Button>
+          {/* <Button className="btn btn-success" type="submit">Submit</Button> */}
+        
         </div>
       </div>
+      <Card>
+      <div className="card-header">
+            <img src="./src/assets/images/React_Logo_SVG.svg.png" alt="" />
+        </div>
+      <div className="card-body">
+        <h5 className="card-title">Card title</h5>
+        <p className="mb-4">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a className="btn btn-primary">
+          Go somewhere
+        </a>
+      </div>
+      </Card>
     </div>
   );
 };
