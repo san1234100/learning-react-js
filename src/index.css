@@ -26,3 +26,31 @@
 .dark{
     @apply p-5 bg-[#1a1d20] text-[#ded6b3] text-lg rounded-lg border-[3px] border-[#3b414a];
 }
+
+.btn{
+    @apply px-4 py-2 font-semibold rounded-md;
+}
+.btn-primary{
+    @apply bg-[#0d6efd] text-white hover:bg-[#1061dc]
+}
+.btn-secondary{
+    @apply bg-[#6c757d] text-white hover:bg-[#5e676f]
+}
+.btn-success{
+    @apply bg-[#198754] text-white hover:bg-[#16794b]
+}
+.btn-danger{
+    @apply bg-[#dc3545] text-white hover:bg-[#b02a37]
+}
+.btn-warning{
+    @apply bg-[#ffc107] text-black hover:bg-[#fac935]
+}
+.btn-info{
+    @apply bg-[#0dcaf0] text-black hover:bg-[#1fd2f6]
+}
+.btn-light{
+    @apply bg-[#f8f9fa] text-black hover:bg-[#eceff2]
+}
+.btn-dark{
+    @apply bg-[#212529] text-white hover:bg-[#424649]
+}

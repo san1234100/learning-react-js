@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Accordion from "../components/Accordion";
 import Alert from "../components/Alert";
+import Button from "../components/Button";
 
 const AboutPage = () => {
   const { name } = useParams();
@@ -26,7 +27,8 @@ const AboutPage = () => {
           <Accordion title="What is your channel name?">
             <p>Welcome to Cyberdude channel</p>
           </Accordion>
-          <Alert text={"Troubleshoot"} color={"success"}/>
+          {/* <Alert text={"Troubleshoot"} color={"success"}/> */}
+          <Button className="btn btn-success" type="submit">Submit</Button>
         </div>
       </div>
     </div>

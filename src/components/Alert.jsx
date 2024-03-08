@@ -6,9 +6,9 @@ const Alert = ({text='Unknown',color='primary'}) => {
   <div className={color} role="alert">{text}</div>
   );
 };
-// Alert.propTypes = {
-//     title: propTypes.string,
-//     desc: propTypes.string
+Alert.propTypes = {
+    text: propTypes.string,
+    color: propTypes.string
 
-// }
+}
 export default Alert;
