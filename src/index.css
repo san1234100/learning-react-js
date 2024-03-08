@@ -28,7 +28,7 @@
 }
 
 .btn{
-    @apply px-4 py-2 font-semibold rounded-md cursor-pointer;
+    @apply px-4 py-2 font-semibold rounded-md cursor-pointer my-5;
 }
 .btn-primary{
     @apply bg-[#0d6efd] text-white hover:bg-[#1061dc]

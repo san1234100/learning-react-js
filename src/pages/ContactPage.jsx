@@ -1,13 +1,33 @@
+import FormInput from "../components/FormInput";
+import Button from "../components/Button";
 const ContactPage = () => {
-    return (
-      <>
-      <h1 className="p-4 mt-10 text-center font-semibold text-4xl text-white">Contact</h1>  
-      <ul className="text-center mt-5 text-yellow-500 text-xl space-y-2">
-         <li className="text-5xl font-semibold">Want the Biriyani fast</li>
-         <li className="text-5xl font-semibold">Call <span className="text-white">9634364738</span></li>
-      </ul>
-      </>
-    )
+  const handleOnChange= () =>{
+    
   }
-  
-  export default ContactPage
+  return (
+    <div className="m-10">
+      <div className="bg-white p-10 rounded">
+        <h4 className="font-semibold text-xl">Contact Page</h4>
+        <form action="" className="mt-4">
+        <FormInput
+         name={"fullName"}
+         label={"Full Name"}
+         placeholder={"Enter your name"}
+         handleOnChange={handleOnChange}
+         type={"text"}
+         />
+         <FormInput
+         name={"email"}
+         label={"Email Address"}
+         placeholder={"you@gmail.com"}
+         handleOnChange={handleOnChange}
+         type={"email"}
+         />
+        <Button>Save</Button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default ContactPage;
