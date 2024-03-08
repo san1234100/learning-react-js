@@ -9,12 +9,16 @@ const ContactPage = () => {
   // console.log(name,value);
   setForm({...form,[name]:value});
  }
+ const submitFormToServer = (e) =>{
+  e.preventDefault();
+  console.log(form);
+ }
   return (
     <div className="m-10">
       <div className="bg-white p-10 rounded">
         <h4 className="font-semibold text-xl">Contact Page</h4>
         {/* <div>{JSON.stringify(form)}</div> */}
-        <form action="" className="mt-4">
+        <form action="" className="mt-4" onSubmit={submitFormToServer}>
         <FormInput
          name={"fullName"}
          label={"Full Name"}
