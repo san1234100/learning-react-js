@@ -3,20 +3,26 @@
 @tailwind utilities;
 
 .primary{
-    @apply p-5 bg-blue-950 text-blue-400 text-lg rounded-lg border-[3px] border-blue-500;
+    @apply p-5 bg-[#031633] text-[#4ca8f1] text-lg rounded-lg border-[3px] border-[#0c469c];
 }
 .secondary{
-    @apply p-5 bg-zinc-900 text-gray-400 text-lg rounded-lg border-[3px] border-gray-500;
+    @apply p-5 bg-[#161719] text-gray-400 text-lg rounded-lg border-[3px] border-gray-500;
 }
 .success{
-    @apply p-5 bg-emerald-950 text-emerald-300 text-lg rounded-lg border-[3px] border-emerald-700;
+    @apply p-5 bg-[#051b11] text-[#82cc82] text-lg rounded-lg border-[3px] border-[#116c43];
 }
 .danger{
-    @apply p-5 bg-red-950 text-red-300 text-lg rounded-lg border-[3px] border-red-500;
+    @apply p-5 bg-[#2c0b0e] text-red-200 text-lg rounded-lg border-[3px] border-red-500;
 }
 .warning{
-    @apply p-5 bg-yellow-950 text-yellow-300 text-lg rounded-lg border-[3px] border-yellow-500;
+    @apply p-5 bg-[#332701] text-yellow-300 text-lg rounded-lg border-[3px] border-yellow-500;
 }
 .info{
-    @apply p-5 bg-blue-300 text-blue-100 text-lg rounded-lg border-[3px] border-blue-500;
+    @apply p-5 bg-[#032830] text-[#37d1f6] text-lg rounded-lg border-[3px] border-[#0a6477];
+}
+.light{
+    @apply p-5 bg-[#343a40] text-[#fff] text-lg rounded-lg border-[3px] border-gray-400;
+}
+.dark{
+    @apply p-5 bg-[#1a1d20] text-[#ded6b3] text-lg rounded-lg border-[3px] border-[#3b414a];
 }

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import propTypes from "prop-types"
-const Alert = () => {
+const Alert = ({text='Unknown',color='primary'}) => {
    
   return (
-  <div className="info">Troubleshoot</div>
+  <div className={color} role="alert">{text}</div>
   );
 };
 // Alert.propTypes = {

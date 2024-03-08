@@ -26,7 +26,7 @@ const AboutPage = () => {
           <Accordion title="What is your channel name?">
             <p>Welcome to Cyberdude channel</p>
           </Accordion>
-          <Alert/>
+          <Alert text={"Troubleshoot"} color={"success"}/>
         </div>
       </div>
     </div>
