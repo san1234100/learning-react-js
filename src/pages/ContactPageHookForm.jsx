@@ -1,20 +1,11 @@
 import { useForm } from "react-hook-form";
-import {z} from 'zod'
-import { zodResolver } from "@hookform/resolvers/zod"
+
 const ContactPage = () => {
- const formSchema = z.object(
-    {
-      fullname: z.string().min(3),
-      subject: z.string(),
-    }
-  )
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    resolver: zodResolver(formSchema)
-  });
+  } = useForm();
   const userData = (data) => {
     console.log(data);
   };
@@ -29,7 +20,7 @@ const ContactPage = () => {
             id="fullname"
             placeholder="Full Name"
             className={`px-4 py-2 rounded bg-gray-200 w-full outline-none ${errors.fullname && 'border-2 border-red-500'}`}
-            {...register("fullname")}
+            {...register("fullname", { required: "This field is required", maxLength:{value:20}, minLength:{value:4,message:"Name should be atleast 4 characters"}})}
           />
           {errors.fullname && (
             <small className="text-red-500">{errors.fullname.message}</small>
@@ -40,7 +31,7 @@ const ContactPage = () => {
             id="subject"
             placeholder="Subject"
             className={`px-4 py-2 rounded bg-gray-200 w-full outline-none border-2 ${errors.subject && 'border-2 border-red-500'}`}
-            {...register("subject")}
+            {...register("subject",{required:true})}
           />
           {errors.subject && (
             <small className="text-red-500">Enter the Subject name</small>
