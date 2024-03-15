@@ -1,49 +1,53 @@
-import FormInput from "../components/FormInput";
-import Button from "../components/Button";
-import { useState } from "react";
-import FormTextArea from "../components/FormTextArea";
+import { useForm } from "react-hook-form";
+
 const ContactPage = () => {
- const [form,setForm] = useState({fullName:"",email:"",msg:""})
- const handleInputs = (e) =>{
-  const {name,value}= e.target;
-  // console.log(name,value);
-  setForm({...form,[name]:value});
- }
- const submitFormToServer = (e) =>{
-  e.preventDefault();
-  console.log(form);
- }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const userData = (data) => {
+    console.log(data);
+  };
   return (
     <div className="m-10">
       <div className="bg-white p-10 rounded">
         <h4 className="font-semibold text-xl">Contact Page</h4>
-        {/* <div>{JSON.stringify(form)}</div> */}
-        <form action="" className="mt-4" onSubmit={submitFormToServer}>
-        <FormInput
-         name={"fullName"}
-         label={"Full Name"}
-         placeholder={"Enter your name"}
-         value={form.fullName}
-         handleOnChange={handleInputs}
-         type={"text"}
-         required
-         />
-         <FormInput
-         name={"email"}
-         label={"Email Address"}
-         placeholder={"you@gmail.com"}
-         value={form.email}
-         handleOnChange={handleInputs}
-         type={"email"}
-         />
-         <FormTextArea
-          name={"msg"}
-          label={"Message"}
-          placeholder={"Enter your message"}
-          value={form.msg}
-          handleOnChange={handleInputs}
-         />
-        <Button>Save</Button>
+        <form className="mt-10 p-1 space-y-4" onSubmit={handleSubmit(userData)}>
+          <input
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder="Full Name"
+            className={`px-4 py-2 rounded bg-gray-200 w-full outline-none ${errors.fullname && 'border-2 border-red-500'}`}
+            {...register("fullname", { required: true, maxLength:20, minLength:4})}
+          />
+          {errors.fullname && (
+            <small className="text-red-500">Enter the valid name</small>
+          )}
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+            className={`px-4 py-2 rounded bg-gray-200 w-full outline-none border-2 ${errors.subject && 'border-2 border-red-500'}`}
+            {...register("subject",{required:true})}
+          />
+          {errors.subject && (
+            <small className="text-red-500">Enter the Subject name</small>
+          )}
+
+          <textarea
+            type="text"
+            name="desc"
+            id="desc"
+            placeholder="Describe the message briefly"
+            className="px-4 py-2 rounded bg-gray-200 w-full outline-none"
+            {...register("desc")}
+          ></textarea>
+          <button className="px-4 py-2 bg-green-600 rounded text-white font-medium">
+            Submit
+          </button>
         </form>
       </div>
     </div>
