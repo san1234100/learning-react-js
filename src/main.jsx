@@ -8,6 +8,8 @@ import AboutPage from './pages/AboutPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import FollowersPage from './pages/FollowersPage.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
+import Admin from './layouts/Admin.jsx'
+import Dashboard from './pages/admin/Dashboard.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,21 @@ const router = createBrowserRouter([
         path:'/followers',
         element:<FollowersPage/>,
         errorElement:<ErrorPage/>
+      }
+    ],
+    errorElement:<ErrorPage/>
+  } ,
+  {
+    path:'/admin',
+    element:<Admin/>,
+    children:[
+      {
+        path:'login',
+        element: <div>Login Page</div>
+      },
+      {
+        path:'dashboard',
+        element: <Dashboard/>
       }
     ],
     errorElement:<ErrorPage/>
