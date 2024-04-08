@@ -4,13 +4,13 @@ import AdminSidebar from "../components/AdminSidebar.jsx";
 import { useState } from "react";
 import { UserContext } from "../contexts/UserContext.js";
 const Admin = () => {
-    const [user] = useState({
+    const [user,setUser] = useState({
         id: 1,
         userName: "Vignesh",
       });
   return (
     <div className="min-h-screen pb-10">
-      <UserContext.Provider value={user}>
+      <UserContext.Provider value={{user,setUser}}>
         <AdminNavbar />
         <div className="flex m-10 space-x-10">
           {/* left bar */}

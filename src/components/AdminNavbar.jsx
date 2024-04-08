@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
 const AdminNavbar = () => {
-  const user = useContext(UserContext);
+  const {user} = useContext(UserContext);
 
   return (
     <>

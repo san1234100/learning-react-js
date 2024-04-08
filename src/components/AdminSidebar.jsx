@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 
 const AdminSidebar = () => {
-  const user = useContext(UserContext);
+  const {user} = useContext(UserContext);
   return (
     <>
       <div className="px-10 py-3 flex justify-between items-center">
